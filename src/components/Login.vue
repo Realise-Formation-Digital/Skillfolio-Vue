@@ -40,7 +40,7 @@
                            <div class="red--text"> {{errorMessage}}</div>
                            <v-btn type="submit" class="mt-4" color="primary" value="log in">{{isRegister ? stateObj.register.name : stateObj.login.name}}</v-btn>
                            <div class="grey--text mt-4" v-on:click="isRegister = !isRegister;">
-                              <!-- {{toggleMessage}}   -->
+                              {{toggleMessage}}  
                            </div>
                       </form>
                      </v-card-text>

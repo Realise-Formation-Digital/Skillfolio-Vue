@@ -84,9 +84,7 @@
       return {
         info : [],
         items: [
-          { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-          { title: 'Photos', icon: 'mdi-image' },
-          { title: 'About', icon: 'mdi-help-box' },
+          { title: 'Ajouter un compte CF', icon: 'mdi-view-dashboard' },
         ],
         username:this.$route.params.username
       }
