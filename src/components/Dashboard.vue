@@ -42,13 +42,47 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
+
+    <v-container fluid class="bg-surface-variant">
+      <v-row> 
+          <v-col justify="center" md="4" v-for="item of info" :key="item.id">
+          
+            <li>
+              <b> {{ item.name }} </b>
+              <br />
+              <v-img class="bg-white" height="200" :aspect-ratio="1" :src="item.image_url"></v-img>
+              <br />
+              <div>{{ item.description }}</div>
+              <br />
+                <v-btn block depressed color="error">
+                  --- Plus de details ---
+                </v-btn>
+              <br />
+              <v-divider></v-divider>
+            </li>
+          </v-col>
+        
+      </v-row>
+    </v-container>
 </v-app>
 </template>
 
 <script>
+  import axios from 'axios'
   export default {
+
+   
+
+    async mounted() {
+    const result = await axios.get('https://api.punkapi.com/v2/beers');
+    this.info = result.data;
+    console.log(this.info)
+  },
+
     data () {
       return {
+        info : [],
         items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard' },
           { title: 'Photos', icon: 'mdi-image' },
