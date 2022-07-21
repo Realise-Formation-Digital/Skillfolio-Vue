@@ -1,19 +1,17 @@
 <template>
-    <v-container>
+    <v-container fluid class="bg-surface-variant">
         <v-row>
             <v-col>
-                <v-card class="mx-auto" max-width="344" v-for="item of cf" :key="item.cf">
-                    <v-card-text>
-                        <div>{{ item.departament }}</div>
-                        <p class="text-h4 text--primary">
-                            {{ item.name }}
-                        </p>
-                        <p>{{ item.lastname }}</p>
-                        <div class="text--primary">
-                            {{ item.language }}<br>
-                            {{ item.age }}Ans
-                        </div>
-                    </v-card-text>
+                <v-card elevation="9" class="mx-auto noir" width="20rem" v-for="item of cf" :key="item.cf">
+                    <div>{{ item.departament }}</div>
+                    <p class="text-h4 text--primary">
+                        {{ item.name }}
+                    </p>
+                    <p>{{ item.lastname }}</p>
+                    <div class="text--primary">
+                        {{ item.language }}<br>
+                        {{ item.age }}Ans
+                    </div>
                     <v-card-actions>
                         <v-btn text color="deep-purple accent-4">
                             Learn More
@@ -29,13 +27,19 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "CF",
-  data: () => ({
-    cf : [],
-  }),
-  async mounted () {
-    await this.$store.dispatch('getCf');
-    this.cf = this.$store.getters.allCf;
-  }
+    name: "CF",
+    data: () => ({
+        cf: [],
+    }),
+    async mounted() {
+        await this.$store.dispatch('getCf');
+        this.cf = this.$store.getters.allCf;
+    }
 }) 
 </script>
+<style scoped lang="scss">
+.noir {
+    background-color: rgb(105, 105, 105);
+    margin: 1rem;
+}
+</style>
