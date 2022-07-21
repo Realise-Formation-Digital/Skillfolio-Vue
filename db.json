@@ -1,0 +1,260 @@
+{
+  "cf": [
+    {
+      "id": "234",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "20",
+      "year": "2020",
+      "departament": "web dev",
+      "language": "french, english, spanish",
+      "research": true,
+      "type": "CF",
+      "idJC": "567",
+      "idCC": "675",
+      "idTeacher": "875"
+    },
+    {
+      "id": "856",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "swatch",
+      "language": "french, english, italian",
+      "research": true,
+      "type": "CF",
+      "idJC": "117",
+      "idCC": "935",
+      "idTeacher": "532"
+    },
+    {
+      "id": "345",
+      "name": "geralt",
+      "lastname": "durok",
+      "age": "50",
+      "year": "2022",
+      "departament": "web dev",
+      "language": "french, english, spanish",
+      "research": false,
+      "type": "CF",
+      "idJC": "567",
+      "idCC": "613",
+      "idTeacher": "875"
+    },
+    {
+      "id": "745",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "construction",
+      "language": "french, english, spanish",
+      "research": true,
+      "type": "CF",
+      "idJC": "117",
+      "idCC": "935",
+      "idTeacher": "532"
+    },
+    {
+      "id": "145",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "cleaning",
+      "language": "french, english, spanish",
+      "research": false,
+      "type": "CF",
+      "idJC": "567",
+      "idCC": "675",
+      "idTeacher": "467"
+    },
+    {
+      "id": "698",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "web dev",
+      "language": "french, english, spanish",
+      "research": true,
+      "type": "CF",
+      "idJC": "117",
+      "idCC": "935",
+      "idTeacher": "998"
+    },
+    {
+      "id": "387",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "construction",
+      "language": "french, english, spanish",
+      "research": true,
+      "type": "CF",
+      "idJC": "567",
+      "idCC": "935",
+      "idTeacher": "998"
+    },
+    {
+      "id": "222",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "cleaning",
+      "language": "french, english, spanish",
+      "research": false,
+      "type": "CF",
+      "idJC": "117",
+      "idCC": "613",
+      "idTeacher": "569"
+    },
+    {
+      "id": "444",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "web dev",
+      "language": "french, english, spanish",
+      "research": true,
+      "type": "CF",
+      "idJC": "567",
+      "idCC": "675",
+      "idTeacher": "532"
+    },
+    {
+      "id": "397",
+      "name": "dante",
+      "lastname": "durok",
+      "age": "30",
+      "year": "2017",
+      "departament": "construction",
+      "language": "french, english, spanish",
+      "research": true,
+      "type": "CF",
+      "idJC": "117",
+      "idCC": "613",
+      "idTeacher": "569"
+    }
+  ],
+  "enterprise": [
+    {
+      "id": "3246",
+      "name": "Inovae",
+      "domain": "Web dev",
+      "type": "enterprise"
+    },
+    {
+      "id": "9768",
+      "name": "Maulani",
+      "domain": "Construction",
+      "type": "enterprise"
+    },
+    {
+      "id": "9435",
+      "name": "CyberTech",
+      "domain": "Web dev",
+      "type": "enterprise"
+    },
+    {
+      "id": "3456",
+      "name": "Gardens",
+      "domain": "Garden",
+      "type": "enterprise"
+    },
+    {
+      "id": "3347",
+      "name": "CleaningTop",
+      "domain": "cleaning",
+      "type": "enterprise"
+    },
+    {
+      "id": "7564",
+      "name": "Rolex",
+      "domain": "Swatch",
+      "type": "enterprise"
+    }
+  ],
+  "cc": [
+    {
+      "id": "935",
+      "name": "Romina",
+      "type": "CC"
+    },
+    {
+      "id": "613",
+      "name": "Amber",
+      "type": "CC"
+    },
+    {
+      "id": "675",
+      "name": "Maria",
+      "type": "CC"
+    }
+  ],
+  "teacher": [
+    {
+      "id": "532",
+      "name": "Steven",
+      "departament": "construction",
+      "type": "teacher"
+    },
+    {
+      "id": "569",
+      "name": "Amber",
+      "departament": "Web dev",
+      "type": "teacher"
+    },
+    {
+      "id": "875",
+      "name": "Andrea",
+      "departament": "garden",
+      "type": "teacher"
+    },
+    {
+      "id": "998",
+      "name": "Mario",
+      "departament": "cleaning",
+      "type": "teacher"
+    },
+    {
+      "id": "467",
+      "name": "Snake",
+      "departament": "swatch",
+      "type": "teacher"
+    }
+  ],
+  "jobcoach": [
+    {
+      "id": "567",
+      "name": "Louis",
+      "type": "jobCoach"
+    },
+    {
+      "id": "117",
+      "name": "Fausto",
+      "type": "jobCoach"
+    }
+  ],
+  "login": [
+    {
+      "id": "613",
+      "name": "Amber",
+      "password": "asfasfasf23"
+    },
+    {
+      "name": "dante",
+      "password": "holamundo1234",
+      "id": "dOplNDr"
+    },
+    {
+      "name": "marco",
+      "password": "holamundo1234",
+      "id": "h44lzwx"
+    }
+  ]
+}

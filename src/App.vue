@@ -1,68 +1,33 @@
 <template>
-  <div>
-    <v-container>
-      <v-row>
-        <v-col>
-          <v-app>
-            <v-app-bar app>
-            
-              <router-link to="/" class="black--text pa-md-4 mx-lg-auto"><v-btn color="rgb(255, 0, 0, 0.2)">Home</v-btn></router-link>
-              <router-link to="/about" class="black--text pa-md-4 mx-lg-auto"><v-btn color="rgb(255, 0, 0, 0.2)">About</v-btn></router-link>
-            
-              <v-spacer></v-spacer>
-
-            </v-app-bar>
-
-            <v-main>
-              <router-view/>
-            </v-main> 
-          </v-app>
-        </v-col>
-      </v-row>   
-    </v-container>
-
-    <v-footer dark padless>
-      <v-card class="flex" flat tile>
-        <v-card-title class="teal">
-          <strong class="subheading">Get connected with us on social networks!</strong>
-
-          <v-spacer></v-spacer>
-
-          <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
-            <v-icon size="24px">
-              {{ icon }}
-            </v-icon>
-          </v-btn>
-        </v-card-title>
-
-      </v-card>
-    </v-footer>
+  <div id="app">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/cf">CF</router-link>
+    </nav>
+    <router-view/>
   </div>
 </template>
 
-<style>
-.v-main__wrap, .v-main, body, .v-toolbar__content{
-  background: url('./assets/bg.jpg');
-  background-size: cover;
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 
-* {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode";
+nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
-
-<script lang="ts">
-import Vue from 'vue';
-
-export default Vue.extend({
-  name: 'App',
-
-  data: () => ({
-      icons: [
-        'mdi-facebook',
-        'mdi-linkedin',
-        'mdi-github',
-      ],
-    }),
-  })
-</script>

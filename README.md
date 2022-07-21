@@ -1,4 +1,4 @@
-# bpfolio
+# skillfolio
 
 ## Project setup
 ```
