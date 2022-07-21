@@ -1,8 +1,8 @@
 <template>
-    <v-container fluid class="bg-surface-variant">
-        <v-row>
-            <v-col>
-                <v-card elevation="9" class="mx-auto noir" width="20rem" v-for="item of cf" :key="item.cf">
+    <v-container class="grey lighten-5">
+        <v-row no-gutters>
+            <v-col v-for="n in 3" :key="n" cols="12" sm="4">
+                <v-card class="mx-auto noir" width="20rem" v-for="item of cf" :key="item.cf">
                     <div>{{ item.departament }}</div>
                     <p class="text-h4 text--primary">
                         {{ item.name }}
@@ -30,6 +30,11 @@ export default Vue.extend({
     name: "CF",
     data: () => ({
         cf: [],
+        alignments: [
+            'start',
+            'center',
+            'end',
+        ],
     }),
     async mounted() {
         await this.$store.dispatch('getCf');
