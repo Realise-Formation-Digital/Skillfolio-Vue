@@ -1,9 +1,14 @@
 <template>
   <v-app>
-    <NavbarComp />
-    <v-content>
-      <router-view></router-view>
-    </v-content>
+    <v-parallax
+      height="1000"
+      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+    >
+      <NavbarComp />
+      <v-content>
+        <router-view></router-view>
+      </v-content>
+    </v-parallax>
   </v-app>
 </template>
 
