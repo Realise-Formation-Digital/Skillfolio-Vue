@@ -1,14 +1,12 @@
 <template>
   <v-card class="mx-auto" max-width="500">
-    <v-toolbar color="indigo" dark>
+    <v-toolbar class="infobar" color="indigo" dark>
       <v-toolbar-title>Infomation</v-toolbar-title>
-
-      <v-spacer></v-spacer>
     </v-toolbar>
 
     <v-container fluid>
       <v-row>
-        <v-col class="shrink">
+        <v-col cols="6" class="shrink">
           <v-btn class="ma-2" color="info" @click="expand = !expand">
             SoftSkills
           </v-btn>
@@ -21,7 +19,7 @@
           </v-expand-x-transition>
         </v-col>
 
-        <v-col class="shrink">
+        <v-col cols="6" class="shrink">
           <v-btn class="ma-2" color="warning" @click="expand2 = !expand2">
             Competences
           </v-btn>
@@ -33,7 +31,7 @@
           </v-expand-x-transition>
         </v-col>
 
-        <v-col class="shrink">
+        <v-col cols="6" class="shrink">
           <v-btn
             dark
             class="ma-2"
@@ -50,7 +48,7 @@
           </v-expand-x-transition>
         </v-col>
 
-        <v-col class="shrink">
+        <v-col cols="6" class="shrink">
           <v-btn
             dark
             class="ma-2"
@@ -89,4 +87,8 @@ export default {
 </script>
 
 <style>
+.infobar {
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>
