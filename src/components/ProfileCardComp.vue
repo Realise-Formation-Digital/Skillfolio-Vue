@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="10" class="mx-auto" max-width="434" tile>
+  <v-card elevation="10" class="mx-auto" max-width="600" tile>
     <v-img
       height="100%"
       src="https://cutewallpaper.org/23/web-development-wallpaper-hd/101384277.jpg"
@@ -30,7 +30,7 @@
           </div>
 
           <!-- Description -->
-          <v-col cols="6" class="shrink">
+          <v-col cols="10" class="shrink">
             <v-btn
               elevation="5"
               dark
@@ -47,8 +47,7 @@
                   solo
                   name="input-7-4"
                   label="Editer"
-                  height="90"
-                  width="300"
+                  height="175"
                 ></v-textarea>
               </v-col>
             </v-expand-x-transition>
