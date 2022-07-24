@@ -19,8 +19,11 @@
               <v-col class="py-0">
                 <v-list-item color="rgba(0, 0, 0, .4)" dark>
                   <v-list-item-content>
-                    <v-list-item-title class="text-h6">
-                      Bruno Silva
+                    <v-list-item-title
+                      v-for="profile in profiles"
+                      :key="profile.Id"
+                      class="text-h6"
+                      ><h2>{{ profile.name }}</h2>
                     </v-list-item-title>
                     <v-list-item-subtitle>Dev Web</v-list-item-subtitle>
                   </v-list-item-content>
@@ -60,9 +63,12 @@
 
 <script>
 export default {
-  data: () => ({
-    expand: false,
-  }),
+  data() {
+    return {
+      expand: false,
+      profiles: [],
+    };
+  },
 };
 </script>
 

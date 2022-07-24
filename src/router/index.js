@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ProfilePageView from '../views/ProfilePageView.vue'
+import HomeView from '../views/HomeView.vue'
+import CfListView from '../views/CfListView.vue'
+import ProfileView from '../views/ProfileView.vue'
 
 
 Vue.use(VueRouter)
@@ -9,8 +11,19 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: ProfilePageView
+    component: HomeView
   },
+  {
+    path: '/CfList',
+    name: 'CfList',
+    component: CfListView
+  },
+  {
+    path: '/profiles/:id',
+    name: 'Profiles',
+    component: ProfileView
+  }
+
 ]
 
 

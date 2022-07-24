@@ -11,6 +11,8 @@
   "dependencies": {
     "@mdi/font": "^7.0.96",
     "core-js": "^3.8.3",
+    "jason-server": "^3.0.0",
+    "json-loader": "^0.5.7",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1",
     "vuetify": "^2.6.0",

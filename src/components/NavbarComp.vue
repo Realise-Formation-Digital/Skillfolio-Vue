@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-toolbar app class="info accent-3">
+    <v-app-bar app class="info accent-3">
       <!-- Back to home page btn -->
       <v-btn dark elevation="5" class="blue darken-3">
         <span>Accueil</span>
@@ -59,7 +59,7 @@
           <v-icon>mdi-delete</v-icon>
         </v-btn>
       </v-speed-dial>
-    </v-toolbar>
+    </v-app-bar>
   </nav>
 </template>
 
