@@ -14,7 +14,9 @@
         <input class="SAH" type="search" v-model="search" placeholder="search CF" />
       </form>
       
+      
     </div>
+    <p><AjouterCf></AjouterCf></p>
 
     <v-container v-for="align in alignments" :key="align" class="grey lighten-5 mb-6">
       <v-row :align="align" no-gutters style="height: 100px;">
@@ -46,15 +48,16 @@
 import Vue from "vue";
 import _ from "lodash";
 import Modal from "@/views/MoDalView.vue"
+import AjouterCf from "@/components/AjouterCf.vue";
 
 
 export default Vue.extend({
 
   name: "CF",
   components: {
-    'modal': Modal,
-    
-  },
+    "modal": Modal,
+    "AjouterCf": AjouterCf
+},
   data: () => ({
     alignments: [
       'start',
