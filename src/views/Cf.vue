@@ -1,41 +1,82 @@
 <template>
-    <v-container>
-        <v-row>
-            <v-col>
-                <v-card class="mx-auto" max-width="344" v-for="item of cf" :key="item.cf">
-                    <v-card-text>
-                        <div>{{ item.departament }}</div>
-                        <p class="text-h4 text--primary">
-                            {{ item.name }}
-                        </p>
-                        <p>{{ item.lastname }}</p>
-                        <div class="text--primary">
-                            {{ item.language }}<br>
-                            {{ item.age }}Ans
-                        </div>
-                    </v-card-text>
-                    <v-card-actions>
-                        <v-btn text color="deep-purple accent-4">
-                            Learn More
-                        </v-btn>
-                    </v-card-actions>
-                </v-card>
-            </v-col>
-        </v-row>
+<div>
+    
+    <div>
+        <h1>All CF Profil</h1>
+        <form role="search">
+            <input type="search" v-model="search" placeholder="search CF"/> 
+        </form>
+    </div>
+    
+
+    <v-container
+      v-for="align in alignments"
+      :key="align"
+      class="grey lighten-5 mb-6"
+    >
+      <v-row
+        :align="align"
+        no-gutters
+        style="height: 100px;"
+      >
+        <v-col
+          v-for="item of cf" :key="item.cf"
+        >
+          <v-card
+            class="pa-2"
+            outlined
+            tile
+            
+          >
+           
+      <v-list-item-content>
+        <v-list-item-title>CF</v-list-item-title>
+        <v-list-item-title>Name : {{ item.name }}</v-list-item-title>
+        <v-list-item-title>Lastname : {{ item.lastname }}</v-list-item-title>
+        <v-list-item-title>Age : {{ item.age }}</v-list-item-title>
+        <v-list-item-title><v-btn>Profil</v-btn></v-list-item-title>
+      </v-list-item-content>
+    
+            <!-- CF
+            Name : {{ item.name }}
+            LastName : {{ item.lastname }}
+            Age : {{ item.age }} -->
+          
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
+</div>
 </template>
  
 <script>
 import Vue from "vue";
+import _ from "lodash";
 
 export default Vue.extend({
-  name: "CF",
-  data: () => ({
-    cf : [],
-  }),
-  async mounted () {
-    await this.$store.dispatch('getCf');
-    this.cf = this.$store.getters.allCf;
-  }
+
+    name: "CF",
+    data: () => ({
+      alignments: [
+        'start',
+        'center',
+        'end',
+      ],
+      cf : [],
+      search: []
+    }),
+    async mounted () {
+        await this.$store.dispatch('getCf');
+        this.cf = this.$store.getters.allCf;
+    },
+    watch: {
+        search: _.debounce(function (query) {
+           this.cf = this.$store.getters.filtered(query);
+        }, 500)
+    }
 }) 
 </script>
+
+<style lang="scss">
+
+</style>
