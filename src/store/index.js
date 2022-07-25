@@ -9,7 +9,10 @@ export default new Vuex.Store({
     cf: [],
   },
   getters: {
-    allCf: (state) => state.cf
+    allCf: (state) => state.cf,
+    filtered: (state) => (query) =>  {
+      return state.cf.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
+    }
   },
   mutations: {
     CF_STATE(state, payload) {
