@@ -14,16 +14,15 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/CfList',
-    name: 'CfList',
+    path: '/profiles',
+    name: 'profiles',
     component: CfListView
   },
   {
     path: '/profiles/:id',
-    name: 'Profiles',
+    name: 'profileDetails',
     component: ProfileView
   }
-
 ]
 
 

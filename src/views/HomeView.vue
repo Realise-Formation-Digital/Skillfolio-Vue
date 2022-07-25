@@ -10,7 +10,7 @@
 export default {
   methods: {
     goToCfList() {
-      this.$router.push("/CfList");
+      this.$router.push("/profiles");
     },
   },
 };

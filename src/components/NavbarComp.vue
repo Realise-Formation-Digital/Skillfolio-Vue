@@ -64,7 +64,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      fab: false,
+    };
+  },
+};
 </script>
 
 <style>

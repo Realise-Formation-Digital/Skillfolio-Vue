@@ -23,7 +23,7 @@
                       v-for="profile in profiles"
                       :key="profile.Id"
                       class="text-h6"
-                      ><h2>{{ profile.name }}</h2>
+                      ><h2>{{ item.name }}</h2>
                     </v-list-item-title>
                     <v-list-item-subtitle>Dev Web</v-list-item-subtitle>
                   </v-list-item-content>
@@ -66,8 +66,11 @@ export default {
   data() {
     return {
       expand: false,
-      profiles: [],
+      id: this.$route.params.id,
     };
+  },
+  mounted() {
+    console.log(this.id);
   },
 };
 </script>

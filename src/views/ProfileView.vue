@@ -113,10 +113,14 @@
 <script>
 import ProfileCardComp from "@/components/ProfileCardComp.vue";
 export default {
-  expand: false,
-  expand2: false,
-  expand3: false,
-  expand4: false,
+  data() {
+    return {
+      expand: false,
+      expand2: false,
+      expand3: false,
+      expand4: false,
+    };
+  },
   components: { ProfileCardComp },
 };
 </script>
