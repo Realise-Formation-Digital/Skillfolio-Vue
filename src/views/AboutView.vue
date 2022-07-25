@@ -7,5 +7,6 @@
         <router-link to="/cf">CF</router-link>
       </v-btn>
     </nav>
+    <h1>Bienvenue ! </h1>
   </div>
 </template>
