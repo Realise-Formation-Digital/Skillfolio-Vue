@@ -4,14 +4,12 @@
             <v-col v-for="n in 3" :key="n" cols="12" sm="4">
                 <v-card class="mx-auto noir" width="20rem" v-for="item of cf" :key="item.cf">
                     <li>{{ item.departament }}
-                        <p class="text-h4 text--primary">
+                        <b class="text-h4 text--primary">
                             {{ item.name }}
-                        </p>
-                        <p>{{ item.lastname }}</p>
-                        <div class="text--primary">
+                        </b>
+                        <b>{{ item.lastname }}</b>
                             {{ item.language }}<br>
                             {{ item.age }}Ans
-                        </div>
                         <v-card-actions>
                             <v-btn text color="deep-purple accent-4">
                                 Learn More
@@ -19,7 +17,7 @@
                         </v-card-actions>
                     </li>
                 </v-card>
-            </v-col>
+                </v-col>
         </v-row>
     </v-container>
 </template>
