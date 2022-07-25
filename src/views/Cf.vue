@@ -1,3 +1,4 @@
+
 <template>
   <div>
 
@@ -19,27 +20,8 @@
               <v-list-item-title>Age : {{ item.age }}</v-list-item-title>
               <v-list-item-title>
 
-                <v-dialog v-model="dialog" width="500">
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-btn v-bind="attrs" v-on="on">Profil</v-btn>
-                  </template>
-                  <v-card>
-                    <v-card-title class="text-h5 grey lighten-2">
-                      Privacy Policy
-                    </v-card-title>
-                    <v-card-text>
-                      Lorem
-                    </v-card-text>
-                    <v-divider></v-divider>
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-                      <v-btn color="primary" text @click="dialog = false">
-                        I accept
-                      </v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </v-dialog>
-
+                
+                <modal :item="item"></modal>
               </v-list-item-title>
             </v-list-item-content>
           </v-card>
@@ -48,20 +30,19 @@
     </v-container>
   </div>
 </template>
- 
+                     
+
 <script>
 import Vue from "vue";
 import _ from "lodash";
+import modal from "../views/MoDalView";
 
 export default Vue.extend({
-
   name: "CF",
+  components: {
+    'modal':modal,
+  },
   data: () => ({
-    data () {
-      return {
-        dialog: false,
-      }
-    },
     alignments: [
       'center',
     ],
