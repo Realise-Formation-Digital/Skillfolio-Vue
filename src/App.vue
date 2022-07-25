@@ -1,9 +1,5 @@
 <template>
   <v-app>
-        
-
-
-
     <v-main>
       <router-link to="/CF">CF</router-link>
       <router-view/>
