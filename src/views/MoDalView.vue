@@ -1,3 +1,5 @@
+<!-- Page codé by Gab, modal qui montre la totalitée des informatin de chaque CF -->
+
 <template>
     <div class="text-center">
         <v-dialog v-model="dialog" width="500">
@@ -11,18 +13,15 @@
 
                 <v-card-text>
                     <v-list-item-content>
-                        <v-list-item-title>ID : {{ item.id }}</v-list-item-title>
-                        <v-list-item-title>Name : {{ item.name }}</v-list-item-title>
+                        <v-list-item-title>Type : {{ item.type}}</v-list-item-title>
+                        <v-list-item-title>Firstname : {{ item.firstname }}</v-list-item-title>
                         <v-list-item-title>Lastname : {{ item.lastname }}</v-list-item-title>
-                        <v-list-item-title>Age : {{ item.age }}</v-list-item-title>
-                        <v-list-item-title>Year : {{ item.year }}</v-list-item-title>
-                        <v-list-item-title>Departement : {{ item.departament }}</v-list-item-title>
-                        <v-list-item-title>Language : {{ item.language }}</v-list-item-title>
-                        <v-list-item-title>Research : {{ item.Research }}</v-list-item-title>
-                        <v-list-item-title>Type : {{ item.type }}</v-list-item-title>
-                        <v-list-item-title>ID Job Coach : {{ item.idJC }}</v-list-item-title>
-                        <v-list-item-title>ID Conseiller Coach : {{ item.idCC }}</v-list-item-title>
-                        <v-list-item-title>ID Formateur : {{ item.idTeacher }}</v-list-item-title>
+                        <v-list-item-title>Description : {{ item.description }}</v-list-item-title>
+                        <v-list-item-title>CC : {{ item.CC }}</v-list-item-title>
+                        <v-list-item-title>JC : {{ item.JC }}</v-list-item-title>
+                        <v-list-item-title>Trainer : {{ item.trainer }}</v-list-item-title>
+                        <v-list-item-title>Status : {{ item.status }}</v-list-item-title>
+                        <v-list-item-title>File : {{ item.File }}</v-list-item-title>
                     </v-list-item-content>
                 </v-card-text>
 

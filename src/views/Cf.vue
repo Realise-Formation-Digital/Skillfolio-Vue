@@ -1,3 +1,5 @@
+<!-- Page codé by Sam
+Page CF avec liste des CF et filtre pour la barre de recherche -->
 
 <template>
   <div>
@@ -9,13 +11,14 @@
 
     <div>
       <h1>All CF Profil</h1>
+      <p><AjouterCf></AjouterCf></p>
       <form role="search">
         <input class="SAH" type="search" v-model="search" placeholder="search CF" />
       </form>
       
       
     </div>
-    <p><AjouterCf></AjouterCf></p>
+    
 
     <v-container v-for="align in alignments" :key="align" class="grey lighten-5 mb-6">
       <v-row :align="align" no-gutters style="height: 100px;">
@@ -24,9 +27,9 @@
 
             <v-list-item-content>
               <v-list-item-title>CF</v-list-item-title>
-              <v-list-item-title>Name : {{ item.name }}</v-list-item-title>
+              <v-list-item-title>Name : {{ item.firstname }}</v-list-item-title>
               <v-list-item-title>Lastname : {{ item.lastname }}</v-list-item-title>
-              <v-list-item-title>Age : {{ item.age }}</v-list-item-title>
+              <v-list-item-title>Age : {{ item.description }}</v-list-item-title>
             </v-list-item-content>
             <v-list-item-title>
             <modal :item="item"></modal>
