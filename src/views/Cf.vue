@@ -3,10 +3,8 @@
   <div>
     <h1>Panneau d'administration</h1>
     <nav>
-      <v-btn>
         <router-link to="/">Log Out</router-link> |
         <router-link to="/home">Home</router-link>
-      </v-btn>
     </nav>
 
     <div>

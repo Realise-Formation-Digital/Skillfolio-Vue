@@ -22,7 +22,7 @@ export default new Vuex.Store({
   },
   actions: {
     async getCf(context) {  //todo await async --> try catch
-      const response = await axios.get('http://localhost:3002/cf')
+      const response = await axios.put('http://localhost:3002/cf')
       console.log("Test",response)
       context.commit('CF_STATE', response.data);
     }
