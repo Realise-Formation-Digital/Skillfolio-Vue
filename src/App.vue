@@ -1,7 +1,24 @@
 <template>
   <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="@/assets/logo3.jpg"
+          transition="scale-transition"
+          max-width="50"
+          max-height="50"
+        />
+      </div>
+    </v-app-bar>
+
     <v-main>
-      <router-link to="/CF">CF</router-link>
       <router-view/>
     </v-main>
   </v-app>
