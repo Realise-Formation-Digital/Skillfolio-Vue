@@ -29,9 +29,9 @@ Page CF avec liste des CF et filtre pour la barre de recherche -->
 
             <v-list-item-content>
               <v-list-item-title>CF</v-list-item-title>
-              <v-list-item-title>Name : {{ item.name }}</v-list-item-title>
+              <v-list-item-title>Name : {{ item.firstname }}</v-list-item-title>
               <v-list-item-title>Lastname : {{ item.lastname }}</v-list-item-title>
-              <v-list-item-title>Age : {{ item.age }}</v-list-item-title>
+              <v-list-item-title>Age : {{ item.description }}</v-list-item-title>
             </v-list-item-content>
             <v-list-item-title>
             <modal :item="item"></modal>
