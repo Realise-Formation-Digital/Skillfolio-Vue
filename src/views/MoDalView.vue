@@ -1,3 +1,5 @@
+<!-- Page codé by Gab, modal qui montre la totalitée des informatin de chaque CF -->
+
 <template>
     <div class="text-center">
         <v-dialog v-model="dialog" width="500">

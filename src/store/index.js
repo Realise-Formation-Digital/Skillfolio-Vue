@@ -1,3 +1,5 @@
+// Page codé by Sam, state management via Axios
+
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'

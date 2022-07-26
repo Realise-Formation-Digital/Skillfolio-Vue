@@ -1,3 +1,6 @@
+<!-- Page codé by Sam
+Page CF avec liste des CF et filtre pour la barre de recherche -->
+
 <template>
   <div>
     <h1>Panneau d'administration</h1>
@@ -10,13 +13,14 @@
 
     <div>
       <h1>All CF Profil</h1>
+      <p><AjouterCf></AjouterCf></p>
       <form role="search">
         <input class="SAH" type="search" v-model="search" placeholder="search CF" />
       </form>
       
       
     </div>
-    <p><AjouterCf></AjouterCf></p>
+    
 
     <v-container v-for="align in alignments" :key="align" class="grey lighten-5 mb-6">
       <v-row :align="align" no-gutters style="height: 100px;">
