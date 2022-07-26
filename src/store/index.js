@@ -13,7 +13,7 @@ export default new Vuex.Store({
   getters: {
     allCf: (state) => state.cf,
     filtered: (state) => (query) =>  {
-      return state.cf.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
+      return state.cf.filter((item) => item.firstname.toLowerCase().includes(query.toLowerCase()))
     }
   },
   mutations: {
