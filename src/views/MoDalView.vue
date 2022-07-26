@@ -9,9 +9,9 @@
                     CF profil
                 </v-card-title>
 
-                 <v-card-text>
+                <v-card-text>
                     <v-list-item-content>
-                        <v-list-item-title>ID : {{ item.id}}</v-list-item-title>
+                        <v-list-item-title>ID : {{ item.id }}</v-list-item-title>
                         <v-list-item-title>Name : {{ item.name }}</v-list-item-title>
                         <v-list-item-title>Lastname : {{ item.lastname }}</v-list-item-title>
                         <v-list-item-title>Age : {{ item.age }}</v-list-item-title>
@@ -29,9 +29,12 @@
                 <v-divider></v-divider>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary" @click="dialog = false">
-                        close
+                    <v-btn color="primary" @click="dialog = false">modifiere <v-icon small class="mr-2"
+                            @click="editItem(item)">
+                            mdi-pencil
+                        </v-icon>
                     </v-btn>
+                    <v-btn color="primary" @click="dialog = false">close</v-btn>
                 </v-card-actions>
             </v-card>
         </v-dialog>

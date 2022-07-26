@@ -61,8 +61,6 @@ export default Vue.extend({
   data: () => ({
     alignments: [
       'start',
-      'center',
-      'end',
     ],
     cf: [],
     search: []

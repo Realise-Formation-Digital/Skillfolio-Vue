@@ -17,14 +17,27 @@ export default new Vuex.Store({
   mutations: {
     CF_STATE(state, payload) {
       state.cf = [...payload];
-      console.log("Ciao",state.cf)
     }
   },
   actions: {
     async getCf(context) {  //todo await async --> try catch
-      const response = await axios.put('http://localhost:3002/cf')
-      console.log("Test",response)
-      context.commit('CF_STATE', response.data);
+      const response = await axios.get('https://2g5gpatwek.preview.infomaniak.website/api/profiles')
+      context.commit('CF_STATE', response.data.data);
+    },
+    async putCf(context) {
+      const response = await axios.put('https://2g5gpatwek.preview.infomaniak.website/api/profiles/5?type=CF&firstname=sami&lastname=sami&description=scrummaster&status=delegated',
+      {
+        id: "id",
+        type: "type",
+        firstname: "firstname",
+        lastname: "lastname",
+        description: "description",
+        CC: "CC",
+        JC: "JC",
+        trainer: "trainer",
+        status: "status",
+      })
+      context.commit('CF_PUT_STATE', response.data.data)
     }
   },
   modules: {
