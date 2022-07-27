@@ -13,26 +13,21 @@
 
                 <v-card-text>
                     <v-list-item-content>
-                        <v-list-item-title>Type : {{ item.type}}</v-list-item-title>
-                        <v-list-item-title>Firstname : {{ item.firstname }}</v-list-item-title>
-                        <v-list-item-title>Lastname : {{ item.lastname }}</v-list-item-title>
-                        <v-list-item-title>Description : {{ item.description }}</v-list-item-title>
-                        <v-list-item-title>CC : {{ item.CC }}</v-list-item-title>
-                        <v-list-item-title>JC : {{ item.JC }}</v-list-item-title>
-                        <v-list-item-title>Trainer : {{ item.trainer }}</v-list-item-title>
-                        <v-list-item-title>Status : {{ item.status }}</v-list-item-title>
-                        <v-list-item-title>File : {{ item.File }}</v-list-item-title>
+                        <v-list-item-title>Type: {{ item.type }}</v-list-item-title>
+                        <v-list-item-title>Firstname: {{ item.firstname }}</v-list-item-title>
+                        <v-list-item-title>Lastname: {{ item.lastname }}</v-list-item-title>
+                        <v-list-item-title>Description: {{ item.description }}</v-list-item-title>
+                        <v-list-item-title>CC: {{ item.CC }}</v-list-item-title>
+                        <v-list-item-title>JC: {{ item.JC }}</v-list-item-title>
+                        <v-list-item-title>Trainer: {{ item.trainer }}</v-list-item-title>
+                        <v-list-item-title>Status: {{ item.status }}</v-list-item-title>
+                        <v-list-item-title>File: {{ item.File }}</v-list-item-title>
                     </v-list-item-content>
                 </v-card-text>
 
                 <v-divider></v-divider>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary" @click="dialog = false">modifiere <v-icon small class="mr-2"
-                            @click="editItem(item)">
-                            mdi-pencil
-                        </v-icon>
-                    </v-btn>
                     <v-btn color="primary" @click="dialog = false">close</v-btn>
                 </v-card-actions>
             </v-card>
@@ -40,6 +35,8 @@
     </div>
 </template>
 <script>
+import axios from "axios"
+
 export default {
     props: {
         item: Object
@@ -49,5 +46,16 @@ export default {
             dialog: false,
         }
     },
+    methods: {
+        updateProduct() {
+            axios.put('https://2g5gpatwek.preview.infomaniak.website/api/profiles/' + this.item.id, this.item)
+                .then(response => {
+                    console.log('response', response);
+                })
+                    .catch(function (error) {
+                        console.log(error.response)
+                    })
+        }
+    }
 }
 </script>

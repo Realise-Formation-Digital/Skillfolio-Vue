@@ -27,7 +27,7 @@ export default new Vuex.Store({
       context.commit('CF_STATE', response.data.data);
     },
     async putCf(context) {
-      const response = await axios.put('https://2g5gpatwek.preview.infomaniak.website/api/profiles/5?type=CF&firstname=sami&lastname=sami&description=scrummaster&status=delegated',
+      const response = await axios.put('https://2g5gpatwek.preview.infomaniak.website/api/profiles',
       {
         id: "id",
         type: "type",
