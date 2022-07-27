@@ -1,3 +1,5 @@
+<!-- page codé by Gab -->
+
 <template>
   <v-app>
     <v-app-bar app dark class="bar">
