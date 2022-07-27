@@ -1,4 +1,4 @@
-<!-- Page codé by Gab, modal qui montre la totalitée des informatin de chaque CF -->
+<!-- Page codé by Gab, modal qui montre la totalitée des informatin de chaque profil -->
 
 <template>
     <div class="text-center">
@@ -8,7 +8,7 @@
             </template>
             <v-card>
                 <v-card-title class="text-h5 grey lighten-2">
-                    CF profil
+                    Profil
                 </v-card-title>
 
                  <v-card-text>

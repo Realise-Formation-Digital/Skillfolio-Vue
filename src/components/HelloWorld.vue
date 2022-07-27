@@ -40,7 +40,7 @@ Page Login -->
             </validation-provider>
             <div class="text-center">
               <v-btn class="signin-btn" type="submit" rounded color="white">
-                <router-link to="home">Sing In</router-link>
+                <router-link to="CF">Sing In</router-link>
               </v-btn>
             </div>
           </v-form>

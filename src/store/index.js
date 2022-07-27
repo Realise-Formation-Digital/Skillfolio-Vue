@@ -9,17 +9,25 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     cf: [],
+    
   },
   getters: {
     allCf: (state) => state.cf,
+   
+
     filtered: (state) => (query) =>  {
-      return state.cf.filter((item) => item.firstname.toLowerCase().includes(query.toLowerCase()))
-    }
+      return state.cf.filter((item) => 
+      item.firstname.toLowerCase().includes(query.toLowerCase()) || item.lastname.toLowerCase().includes(query.toLowerCase()) || item.type.toLowerCase().includes(query.toLowerCase()) || item.status.toLowerCase().includes(query.toLowerCase()))
+    },
+    
   },
   mutations: {
     CF_STATE(state, payload) {
       state.cf = [...payload];
       console.log("Ciao",state.cf)
+    },
+    CF_POST_STATE(state, actions) {
+      state.cf.push(actions);
     }
   },
   actions: {
@@ -28,6 +36,10 @@ export default new Vuex.Store({
       console.log("Test",response)
       context.commit('CF_STATE', response.data.data);
     },
+    async postCf(context, post) {
+      const response = await axios.post('https://2g5gpatwek.preview.infomaniak.website/api/profiles', post)
+      context.commit('CF_POST_STATE', response.data.data);
+    }
   },
   modules: {
   }
