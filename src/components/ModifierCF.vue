@@ -11,15 +11,15 @@
 
                 <v-card-text>
                     <v-list-item-content>
-                        <v-text-field v-model="profil.id"></v-text-field>
-                        <v-text-field v-model="profil.type"></v-text-field>
-                        <v-text-field v-model="profil.firstname"></v-text-field>
-                        <v-text-field v-model="profil.lastname"></v-text-field>
-                        <v-text-field v-model="profil.description"></v-text-field>
-                        <v-text-field v-model="profil.CC"></v-text-field>
-                        <v-text-field v-model="profil.JC"></v-text-field>
-                        <v-text-field v-model="profil.trainer"></v-text-field>
-                        <v-text-field v-model="profil.status"></v-text-field>
+                        <v-text-field v-model="profil.id" placeholder="id"></v-text-field>
+                        <v-text-field v-model="profil.type" placeholder="type"></v-text-field>
+                        <v-text-field v-model="profil.firstname" placeholder="firstname"></v-text-field>
+                        <v-text-field v-model="profil.lastname" placeholder="lastname"></v-text-field>
+                        <v-text-field v-model="profil.description" placeholder="description"></v-text-field>
+                        <v-text-field v-model="profil.CC" placeholder="CC"></v-text-field>
+                        <v-text-field v-model="profil.JC" placeholder="JC"></v-text-field>
+                        <v-text-field v-model="profil.trainer" placeholder="trainer"></v-text-field>
+                        <v-text-field v-model="profil.status" placeholder="status"></v-text-field>
                     </v-list-item-content>
                 </v-card-text>
 
