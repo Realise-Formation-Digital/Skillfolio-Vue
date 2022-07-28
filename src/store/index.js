@@ -34,21 +34,21 @@ export default new Vuex.Store({
       const response = await axios.get('https://2g5gpatwek.preview.infomaniak.website/api/profiles')
       context.commit('CF_STATE', response.data.data);
     },
-    async putCf(context) {
-      const response = await axios.put('https://2g5gpatwek.preview.infomaniak.website/api/profiles',
-      {
-        id: "id",
-        type: "type",
-        firstname: "firstname",
-        lastname: "lastname",
-        description: "description",
-        CC: "CC",
-        JC: "JC",
-        trainer: "trainer",
-        status: "status",
-      })
-      context.commit('CF_PUT_STATE', response.data.data)
-    },
+    // async putCf(context) {
+    //   const response = await axios.put('https://2g5gpatwek.preview.infomaniak.website/api/profiles',
+    //   {
+    //     id: "id",
+    //     type: "type",
+    //     firstname: "firstname",
+    //     lastname: "lastname",
+    //     description: "description",
+    //     CC: "CC",
+    //     JC: "JC",
+    //     trainer: "trainer",
+    //     status: "status",
+    //   })
+    //   context.commit('CF_PUT_STATE', response.data.data)
+    // },
     async postCf(context, post) {
       const response = await axios.post('https://2g5gpatwek.preview.infomaniak.website/api/profiles', post)
       context.commit('CF_POST_STATE', response.data.data);
