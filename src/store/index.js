@@ -14,7 +14,6 @@ export default new Vuex.Store({
   getters: {
     allCf: (state) => state.cf,
    
-
     filtered: (state) => (query) =>  {
       return state.cf.filter((item) => 
       item.firstname.toLowerCase().includes(query.toLowerCase()) || item.lastname.toLowerCase().includes(query.toLowerCase()) || item.type.toLowerCase().includes(query.toLowerCase()) || item.status.toLowerCase().includes(query.toLowerCase()))
@@ -28,10 +27,10 @@ export default new Vuex.Store({
     },
     CF_POST_STATE(state, actions) {
       state.cf.push(actions);
-    }
+    },
   },
   actions: {
-    async getCf(context) {  //todo await async --> try catch
+    async getCf(context) {
       const response = await axios.get('https://2g5gpatwek.preview.infomaniak.website/api/profiles')
       console.log("Test",response)
       context.commit('CF_STATE', response.data.data);
@@ -39,7 +38,7 @@ export default new Vuex.Store({
     async postCf(context, post) {
       const response = await axios.post('https://2g5gpatwek.preview.infomaniak.website/api/profiles', post)
       context.commit('CF_POST_STATE', response.data.data);
-    }
+    },
   },
   modules: {
   }
